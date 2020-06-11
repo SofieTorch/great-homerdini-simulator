@@ -1,4 +1,4 @@
-# great-homerdini-simulator
+# The Great Homerdini Simulator
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/great-homerdini-simulator)
 A simple web page that guesses the number you think (just follow the instructions😉).  
