@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Piensa en un número ;)</h1>
+  <hr>
+  <h4>Instrucciones</h4>
+  <p>
+    Que tu número no sea muy grande, cuando lo tengas deberás generar una tabla (click en "Generar tabla") con el número de columnas que quieras (recomendación: que no pasen de 10). Luego inspecciona la tabla y recuerda en qué columnas aparece el número que pensaste, haz click en "Adivina mi número" y responde las preguntas!
+  </p>
+
+  <div class="form-group">
+    <label>Número de columnas:</label>
+    <input type="number" class="form-control" [(ngModel)]="nroColumnas">
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="generarTabla()">Generar tabla</button>
+
+  <br>
+  <br>
+  
+  <table class="table table-bordered" *ngIf="mostrarTabla">
+    <tbody>
+      <tr class="row" *ngFor="let fila of tabla; let i = index">
+        <td class="col" *ngFor="let num of fila; let j = index">{{ tabla[i][j] }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button *ngIf="mostrarTabla" type="button" class="btn btn-primary" (click)="descifrarNumero()">Adivina mi número</button>
+
+</div>
+
+<br>
